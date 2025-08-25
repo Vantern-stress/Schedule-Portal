@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F0EEEE;
+  color: #2F3D3E;
+  line-height: 1.6;
+}
+
+/* Header: big block, all caps */
+header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #3C6B54; /* Green header */
+  color: #FFFFFF;
+  font-size: 32px;           /* bigger than before */
+  font-weight: bold;
+  text-transform: uppercase; /* all caps */
+  letter-spacing: 2px;       /* adds spacing for block style */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #3C6B54; /* Same green as header */
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F0EEEE; /* grey */
+  padding: 15px 10px;
+  gap: 10px;
+  border-bottom: 2px solid #2F3D3E;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.tab-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.tab {
+  background-color: #3C6B54;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.tab span {
+  white-space: nowrap;
+}
+
+.tab:hover,
+.tab.active {
+  background-color: #2F3D3E;
+}
+
+.tab-content {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #FFFFFF; /* content frame white */
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tab-content:not(.active) {
+  display: none;
+}
+
+.schedule-list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.schedule-list li {
+  margin-bottom: 15px;
+}
+
+.schedule-list a {
+  color: #3C6B54;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.schedule-list a:hover {
+  color: #2F3D3E;
+  text-decoration: underline;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 700px) {
+  .tabs-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-item {
+    width: 80%;
+  }
+
+  iframe {
+    height: 400px;
+  }
+}
